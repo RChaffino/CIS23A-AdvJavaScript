@@ -1,0 +1,162 @@
+/*  
+ *	Author:		Rich Chaffino
+ *	Instructor:	Dr. Mandyam
+ *	Class:		CIS 023A - Advanced JavaScript
+ *	Date:   	27 June 2020
+ *	Project:	Bit of C0D3: Casino Games Training
+ *	Filename:	globalstyle.css
+ */
+
+palette {
+#5cadeb;/*color1 blue*/
+#a0cff3;/*color2 light blue*/
+#cde6f9;/*color3 sky blue*/
+#e4ebb2;/*color4 cream*/
+#0fc74f;/*color5 green*/
+#c0305b;/*color6 red*/
+}
+
+#container {
+	width: 800px;
+	height: 600px;
+}
+
+#header	{
+	width: 800px;
+	height: 60px;
+	position: relative;
+	background-image: url("images/circuit-code-web-header-900x300.jpg");
+	background-color: black;
+}
+
+#topnav  {
+	display: none;
+	height: 30px;
+	position: absolute;
+	left: 21%;
+	top: 70px;
+	text-align: center;
+}
+
+#subnav, #footer  {
+	width: 100%;
+	height: 20px;
+	position: relative;
+	background-color: #0fc74f;/*color5 green*/
+	border-top: 2px solid #000000;
+	border-bottom: 2px solid #000000;
+}
+
+#subnavList {
+	position: absolute;
+	left: 20px;
+}
+
+.subnavlink  {
+	float: left;
+	display: none;
+
+	height: 30px;
+	margin: 5px 15px;
+
+	font-size: 16px; 
+	font-family: serif;
+	color: black;
+	text-align: center;
+	text-decoration: underline;
+}
+
+/* single heioght attribute for all 3 divs */
+#leftnav, #rightnav, #body {
+	height: 60%;
+	padding: 10px;
+}
+#leftnav, #rightnav {
+	width: 20%;
+	background-color: #a0cff3;/*color2 light blue*/
+}
+#leftnav {
+	float: left;
+}
+#rightnav  {
+	display: none;
+	float: right;
+}
+
+.leftnavList {
+	font-size: 16px; 
+	font-family: sans-serif;
+	color: #5cadeb;/*color1 blue*/
+}
+
+.leftnavList li {
+	margin: 15px 0;
+}
+
+.leftnavLink {
+	color: #c0305b;/*color6 red*/
+	text-decoration: underline;
+}
+
+.leftnavLink:hover {
+	color: #e4ebb2;/*color4 cream*/
+	text-decoration: underline;
+}
+
+#body {
+	padding-left: 25%;
+	background-color: #cde6f9;/*color3 sky blue*/
+}
+
+#footer {
+	clear: both;
+	text-align: center;
+}
+
+.box {
+//	display: block;
+	width: 350px;
+	padding: 10px;
+	background-color: #e4ebb2;/*color4 cream*/
+	border: 2px solid #c0305b;/*color6 red*/
+}
+
+.box h2 {
+	margin: 0;
+	padding: 0;
+	font-size: 18px;
+	color: #c0305b;/*color6 red*/
+	font-family: sans-serif;
+}
+
+.box ul {
+	margin: 6px 0 3px -18px;
+}
+
+h2 {
+	margin: 0;
+	padding: 0;
+	font-size: 18px;
+	color: black;
+	font-family: sans-serif;
+}
+
+
+h1 {
+	font-size: 48px;
+	font-family: sans-serif;
+	color: #5cadeb;/*color1 blue*/
+	text-shadow: 4px 3px #c0305b;/*color6 red*/
+	text-align: center;
+	padding: 0;
+	margin: 0;
+}
+
+.fineprint {
+	font-size: 9px;
+	font-family: sans-serif;
+	text-align: center;
+	position: absolute;
+	bottom: 0;
+}
+

@@ -1,0 +1,95 @@
+<html>
+<head>
+<!--
+	Author:		Rich Chaffino
+	Instructor:	Dr. Mandyam
+	Class:		CIS 023A - Advanced JavaScript
+	Date:   	27 June 2020
+	Project:	Bit of C0D3: Casino Games Training
+	Filename:	index.htm
+-->
+
+<link href="globalstyle.css" rel="stylesheet" type="text/css">
+<link href="project1.css" rel="stylesheet" type="text/css">
+<title>CIS23A R. Chaffino</title>
+</head>
+<body>
+
+<div id="container">
+
+<div id="header">
+<h1>CIS23A Adv JavaScript</h1>
+<div id="topnav">
+	<div class="menuTab">Tab 1</div>
+	<div class="menuTab">Tab 2</div>
+	<div class="menuTab">Tab 3</div>
+</div>
+</div>
+
+<div id="subnav">
+<div id="subnavList">
+	<div class="subnavlink">Link 1</div>
+	<div class="subnavlink">Link 2</div>
+	<div class="subnavlink">Link 3</div>
+	<div class="subnavlink">Link 4</div>
+</div>
+</div>
+
+<div id="leftnav">
+<ul class="leftnavlist">
+	<li><a href="assignment1.htm" class="leftnavLink">
+		Assignment 1<br>
+		Reverse GUI</a></li>
+	<li><a href="assignment2.htm" class="leftnavLink">
+		Assignment 2<br>
+		Temperature Calculator</a></li>
+	<li>Assignment 3</li>
+	<li>Assignment 4</li>
+	<li>Assignment 5</li>
+	<li>Assignment 6</li>
+</ul>
+</div>
+
+<div id="rightnav">
+</div>
+
+<div id="body">
+<form id="formRevGUI">
+	<label for="yourNumber" class="revGUITitle">
+		Let's play a numbers game!</label><br>
+	<fieldset>
+	<label for="yourNumber">
+		Show me your number...</label><br>
+	<input id="yourNumber" type="number" class="mirrorIn">
+	<input id="myNumber" type="text" class="mirrorOut" readonly>
+	<div class="upsidedown">
+		<label for="myNumber">
+			...and I'll show you mine</label>
+	</div>
+	</fieldset>
+	<fieldset>
+	<button id="clearButton">Clear</button>
+	<button id="showButton">Show</button>
+	</fieldset>
+	<div width="100%">
+	<label for="showButton">
+		Enter your number on the left and <br>
+		click "Show" to see my number on the right</label>
+	</div>
+</form>
+
+<div class="box">
+	<h2>JavaScript Concepts</h2>
+	<ul>
+		<li><code>form</code> elements</li>
+		<li>create event listeners</li>
+	</ul>
+</div>
+</div>
+
+<div id="footer">Rich Chaffino - San Jose, CA - <a href="mailto:richchaffino@gmail.com">richchaffino@gmail.com</a></div>
+</div>
+<script src="project1.js"></script>
+<script src="index.js"></script>
+</body>
+</html>

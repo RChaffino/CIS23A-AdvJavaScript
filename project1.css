@@ -1,0 +1,84 @@
+/*  
+ *	Author:		Rich Chaffino
+ *	Instructor:	Dr. Mandyam
+ *	Class:		CIS 023A - Advanced JavaScript
+ *	Date:   	23 June 2020
+ *	Project:	Bit of C0D3: Casino Games Training
+ *	Filename:	projects.css
+ */
+
+label {
+	font-size: 18px;
+	color: #c0305b;/*color6 red*/
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+fieldset {
+	border: 0;
+	margin: 0;
+}
+
+.revGUITitle {
+	font-size: 24px;
+}
+
+.mirrorIn, .mirrorOut {
+	width: 48%;
+	font-size: 36px;
+	font-family: Courier, monospace;
+	color: #5cadeb;/*color1 blue*/
+	border: 2px solid #c0305b;/*color6 red*/
+}
+
+.mirrorIn {
+	float:left;
+	text-align: right;
+}
+
+.mirrorOut {
+	float: right;
+	text-align: left;
+}
+
+.upsideDown {
+	position: relative;
+	margin-top: 50px;
+  transform: rotate(180deg);
+  /* Legacy vendor prefixes that you probably don't need... */
+  /* Safari */
+  -webkit-transform: rotate(180deg);
+  /* Firefox */
+  -moz-transform: rotate(180deg);
+  /* IE */
+  -ms-transform: rotate(180deg);
+  /* Opera */
+  -o-transform: rotate(180deg);
+  /* Internet Explorer */
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+}
+
+button {
+	width: 20%;
+	background-color: #a0cff3;/*color2 light blue*/
+	border: 2px solid #c0305b;/*color6 red*/
+	font-size: 24px;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+}
+
+button:hover {
+	color: #5cadeb;/*color1 blue*/
+}
+	
+#clearButton {
+	float: left;
+	margin-left: 15%;
+}
+
+#showButton {
+	float: right;
+	margin-right: 15%;
+}

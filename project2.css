@@ -1,0 +1,84 @@
+/*  
+ *	Author:		Rich Chaffino
+ *	Instructor:	Dr. Mandyam
+ *	Class:		CIS 023A - Advanced JavaScript
+ *	Date:   	23 June 2020
+ *	Project:	Bit of C0D3: Casino Games Training
+ *	Filename:	projects.css
+ */
+
+#rightnav {
+	display: block;
+}
+
+.rightnavList {
+	font-size: 16px; 
+	font-family: sans-serif;
+	color: #5cadeb;/*color1 blue*/
+}
+
+.rightnavLink {
+	height: 50px;
+	color: #c0305b;/*color6 red*/
+	text-decoration: underline;
+}
+
+.rightnavLink tr {
+	height: 50px;
+}
+
+.rightnavLink:hover {
+	color: #e4ebb2;/*color4 cream*/
+	text-decoration: underline;
+}
+
+label, input {
+	font-size: 28px;
+	color: #c0305b;/*color6 red*/
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+fieldset {
+	border: 0;
+	margin: 0;
+}
+
+input[type=number] {
+	width: 110px;
+	text-align: right;
+	color: #5cadeb;/*color1 blue*/
+	border: 3px solid #c0305b;/*color6 red*/
+	margin: 6px 0 6px 40px;
+}
+
+input[type=radio] {
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	border-radius: 50%;
+	width: 24px;
+	height: 24px;
+	color: white;
+	background-color: white;
+	border: 3px solid #c0305b;/*color6 red*/
+}
+
+input[type=radio]:checked {
+	border: 12px solid #c0305b;/*color6 red*/
+}
+
+button {
+	width: 150px;
+	background-color: #a0cff3;/*color2 light blue*/
+	border: 2px solid #c0305b;/*color6 red*/
+	font-size: 24px;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+}
+
+button:hover {
+	color: #5cadeb;/*color1 blue*/
+}
