@@ -13,7 +13,7 @@
 
 // global variables
 
-
+/*
 function parseData() {
 	var formData = decodeURIComponent(location.search);
 	var formArrray = [];
@@ -30,8 +30,8 @@ function parseData() {
 		list.appendChild(newItem);
 	}
 }
+*/
 
-/*
 function parseData() {
 	var formData = document.cookie;
 	var formArrray = [];
@@ -43,7 +43,6 @@ function parseData() {
 		list.appendChild(newItem);
 	}
 }
-*/
 
 if (window.addEventListener) {
 	window.addEventListener("load", parseData, false);
