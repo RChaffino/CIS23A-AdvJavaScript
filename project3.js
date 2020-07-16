@@ -75,8 +75,6 @@ function showText(evt) {
 	document.getElementById("amount").value = (amt/100).toFixed(2);
 	document.getElementById("amountText").value = t;
 
-	window.alert(t.length);
-
 	if (t.length > 62) {
 		document.getElementById("amountText").style.fontSize = "15px";
 	} else if (t.length > 56) {	//143.91
