@@ -41,10 +41,12 @@ function showText(evt) {
 		return false;
 	}
 
-	amt *= 1;
-	amt %= 1000;
-	var dollars = Math.floor(amt);
-	var cents = Math.floor((amt * 100) % 100);
+	amt *= 1;					// to number
+	amt *= 100;					// to integer
+	amt = Math.round(amt);		// remove extra decimals
+	amt %= 100000;				// remove anything over $1000
+	var dollars = Math.floor(amt / 100);
+	var cents = amt % 100;
 	
 	if (dollars >= 100) {
 		t += oneTo99[Math.floor(dollars / 100)] + " hundred";
@@ -70,18 +72,20 @@ function showText(evt) {
 	ckNum++;
 	document.getElementById("checkNum").innerHTML = ckNumText;
 	
-	document.getElementById("amount").value = amt.toFixed(2);
+	document.getElementById("amount").value = (amt/100).toFixed(2);
 	document.getElementById("amountText").value = t;
 
-	if (t.length > 60) {
-		document.getElementById("amountText").style.fontSize = "14px";
-	} else if (t.length > 50) {
+	window.alert(t.length);
+
+	if (t.length > 62) {
+		document.getElementById("amountText").style.fontSize = "15px";
+	} else if (t.length > 56) {	//143.91
 		document.getElementById("amountText").style.fontSize = "16px";
-	} else if (t.length > 45) {
+	} else if (t.length > 48) {	//24.73
 		document.getElementById("amountText").style.fontSize = "18px";
-	} else if (t.length > 40) {
+	} else if (t.length > 42) { //17.17
 		document.getElementById("amountText").style.fontSize = "21px";
-	} else if (t.length > 30) {
+	} else if (t.length > 36) { //17.02
 		document.getElementById("amountText").style.fontSize = "24px";
 	} else {
 		document.getElementById("amountText").style.fontSize = "28px";
