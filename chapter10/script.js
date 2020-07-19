@@ -22,6 +22,8 @@ function setUpPage() {
 	var movableItems = document.querySelectorAll("#room div");
 	zIndexCounter = movableItems.length + 1;
 	for (var i = 0; i < movableItems.length; i++) {
+		movableItems[i].addEventListener("mspointerdown", startDrag, false);
+		movableItems[i].addEventListener("pointerdown",startDrag, false);
 		if (movableItems[i].addEventListener) {
 			movableItems[i].addEventListener("mousedown", startDrag, false);
 			movableItems[i].addEventListener("touchstart", startDrag, false);
@@ -29,6 +31,9 @@ function setUpPage() {
 			movableItems[i].attachEvent("onmousedown", startDrag);
 		}
 	}
+	// disable IE10+ interface gestures
+	movableItems[i].style.msTouchAction = "none";
+	movableItems[i].style.touchAction = "none";
 }
 
 // configure page to display Setup content
@@ -46,6 +51,24 @@ function loadDirections(string) {
    document.querySelector("nav ul li:last-of-type").className = "current";
    document.getElementById("setup").style.display = "none";
    document.getElementById("location").style.display = "block";
+	getTest();
+}
+
+function geoTest() {
+	if (navigator.geolocation) {
+		navigator.geolocation.getCurrentPosition(createDirections, fail, {timeout: 10000});
+	} else {
+		fail();
+	}
+}
+
+function createDirections(position) {
+	console.log("Longitude: " + position.coords.longitude);
+	console.log("Latitude: " + position.coords.latitude);
+}
+
+function fail() {
+	console.log("Geolocation information not available or not authorized.");
 }
 
 // run setUpPage() function when page finishes loading
@@ -60,8 +83,13 @@ function startDrag(evt) {
 	// on top of others
 	zIndexCounter++;
 	if (evt.type !== "mousedown") {
+		evt.preventDefault();
 		this.addEventListener("touchmove", moveDrag, false);
+		this.addEventListener("mspointermove", moveDrag, false);
+		this.addEventListener("pointermove", moveDrag, false);
 		this.addEventListener("touchend", removeTouchListener, false);
+		this.addEventListener("mspointerup", removeTouchListener, false);
+		this.addEventListener("pointerup", removeTouchListener, false);
 	} else {
 		this.addEventListener("mousemove", moveDrag, false);
 		this.addEventListener("mouseup", removeDragListener, false);
@@ -101,5 +129,9 @@ function removeDragListener() {
 
 function removeTouchListener() {
 	this.removeEventListener("touchmove", moveDrag, false);
+	this.removeEventListener("mspointermove", moveDrag, false);
+	this.removeEventListener("pointermove", moveDrag, false);
 	this.removeEventListener("touchend", removeTouchListener, false);
+	this.removeEventListener("mspointerup", removeTouchListener, false);
+	this.removeEventListener("pointerup", removeTouchListener, false);
 }
