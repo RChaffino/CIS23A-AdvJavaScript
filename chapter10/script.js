@@ -47,10 +47,10 @@ function loadSetup() {
 
 // configure page to display Directions content
 function loadDirections(string) {
-   document.querySelector("nav ul li:first-of-type").className = "";
-   document.querySelector("nav ul li:last-of-type").className = "current";
-   document.getElementById("setup").style.display = "none";
-   document.getElementById("location").style.display = "block";
+	document.querySelector("nav ul li:first-of-type").className = "";
+	document.querySelector("nav ul li:last-of-type").className = "current";
+	document.getElementById("setup").style.display = "none";
+	document.getElementById("location").style.display = "block";
 	geoTest();
 }
 
