@@ -52,7 +52,12 @@ function loadDirections(string) {
 	document.querySelector("nav ul li:last-of-type").className = "current";
 	document.getElementById("setup").style.display = "none";
 	document.getElementById("location").style.display = "block";
-	geoTest();
+//	geoTest();
+	if (typeof google !== 'object') {
+		var script = document.createElement("script");
+		script.src = "https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true&callback=geoTest";
+		document.body.appendChild(script);
+	}
 }
 
 function geoTest() {
