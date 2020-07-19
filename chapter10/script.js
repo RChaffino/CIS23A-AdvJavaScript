@@ -24,6 +24,7 @@ function setUpPage() {
 	for (var i = 0; i < movableItems.length; i++) {
 		if (movableItems[i].addEventListener) {
 			movableItems[i].addEventListener("mousedown", startDrag, false);
+			movableItems[i].addEventListener("touchstart", startDrag, false);
 		} else if (movableItems[i].attachEvent) {
 			movableItems[i].attachEvent("onmousedown", startDrag);
 		}
@@ -58,8 +59,13 @@ function startDrag(evt) {
 	// incremnet z-index counter so next selected element is
 	// on top of others
 	zIndexCounter++;
-	this.addEventListener("mousemove", moveDrag, false);
-	this.addEventListener("mouseup", removeDragListener, false);
+	if (evt.type !== "mousedown") {
+		this.addEventListener("touchmove", moveDrag, false);
+		this.addEventListener("touchend", removeTouchListener, false);
+	} else {
+		this.addEventListener("mousemove", moveDrag, false);
+		this.addEventListener("mouseup", removeDragListener, false);
+	}
 	pos = [this.offsetLeft,this.offsetTop];
 	origin = getCoords(evt);
 }
@@ -85,4 +91,9 @@ function getCoords(evt) {
 function removeDragListener() {
 	this.removeEventListener("mousemove", moveDrag, false);
 	this.removeEventListener("mouseup", removeDragListener, false);
+}
+
+function removeTouchListener() {
+	this.removeEventListener("touchmove", moveDrag, false);
+	this.removeEventListener("touchend", removeTouchListener, false);
 }
