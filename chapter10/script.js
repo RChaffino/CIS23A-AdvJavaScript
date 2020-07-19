@@ -22,6 +22,9 @@ function setUpPage() {
 	var movableItems = document.querySelectorAll("#room div");
 	zIndexCounter = movableItems.length + 1;
 	for (var i = 0; i < movableItems.length; i++) {
+		// disable IE10+ interface gestures
+		movableItems[i].style.msTouchAction = "none";
+		movableItems[i].style.touchAction = "none";
 		movableItems[i].addEventListener("mspointerdown", startDrag, false);
 		movableItems[i].addEventListener("pointerdown",startDrag, false);
 		if (movableItems[i].addEventListener) {
@@ -31,9 +34,6 @@ function setUpPage() {
 			movableItems[i].attachEvent("onmousedown", startDrag);
 		}
 	}
-	// disable IE10+ interface gestures
-	movableItems[i].style.msTouchAction = "none";
-	movableItems[i].style.touchAction = "none";
 }
 
 // configure page to display Setup content
