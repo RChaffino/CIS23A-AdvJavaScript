@@ -51,7 +51,7 @@ function loadDirections(string) {
    document.querySelector("nav ul li:last-of-type").className = "current";
    document.getElementById("setup").style.display = "none";
    document.getElementById("location").style.display = "block";
-	getTest();
+	geoTest();
 }
 
 function geoTest() {
