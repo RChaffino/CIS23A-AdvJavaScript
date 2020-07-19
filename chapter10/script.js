@@ -66,12 +66,13 @@ function geoTest() {
 
 function createDirections(position) {
 	clearTimeout(waitForUser);
-	console.log("Longitude: " + position.coords.longitude);
-	console.log("Latitude: " + position.coords.latitude);
+//	console.log("Longitude: " + position.coords.longitude);
+//	console.log("Latitude: " + position.coords.latitude);
 	var currPosLat = position.coords.latitude;
 	var currPosLng = position.coords.longitude;
 	var mapOptions = {
-		center: new google.maps.LatLng(currPosLat, currPosLng),
+//		center: new google.maps.LatLng(currPosLat, currPosLng),
+		center: new google.maps.LatLng(39.96118, -82.99879),
 		zoom: 12
 	};
 	var map = new google.maps.Map(document.getElementById("map"), mapOptions);
