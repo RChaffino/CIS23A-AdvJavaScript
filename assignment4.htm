@@ -4,8 +4,8 @@
 	Author:		Rich Chaffino
 	Instructor:	Dr. Mandyam
 	Class:		CIS 023A - Advanced JavaScript
-	Date:   	
-	Project:	
+	Date:   	20 July 2020
+	Project:	4 Function Calculator
 	Filename:	assignment4.htm
 -->
 
@@ -46,7 +46,9 @@
 	<li><a href="assignment3.htm" class="leftnavLink">
 		Assignment 3<br>
 		Checkbook</a></li>
-	<li>Assignment 4</li>
+	<li><a href="assignment4.htm" class="leftnavLink">
+		Assignment 4<br>
+		Calculator</a></li>
 	<li>Assignment 5</li>
 	<li>Assignment 6</li>
 </ul>
@@ -56,10 +58,42 @@
 </div>
 
 <div id="body">
+	<div id="calculator">
+	<form id="calcForm">
+	<label for="argument1">Four Function Calculator</label>
+	<table>
+		<tr>
+			<td><input id="argument1" type="number" value="0">
+				<label id="sign">&plus;</label>
+				<input id="argument2" type="number" value="0"></td>
+			<td align="right"><label for="result" id="equal">&equals;</label>
+				<input id="result" type="number" value="0" readonly></td>
+		</tr>
+		<tr>
+			<td id="signs">
+				<input type="radio" id="add" name="operation" checked>
+					<label for="add">&plus;</label>
+				<input type="radio" id="subtract" name="operation">
+					<label for="subtract">&minus;</label><br>
+				<input type="radio" id="multiply" name="operation">
+					<label for="multiply">&times;</label>
+				<input type="radio" id="divide" name="operation">
+					<label for="divide">&divide;</label>
+			</td>
+			<td align="right">
+				<button id="calcButton">Calculate</button><br>
+				<button id="clearButton">Clear</button>
+			</td>
+		</tr>
+	</table>
+	</form>
+	</div>
 	<div class="box">
 		<h2>JavaScript Concepts</h2>
 		<ul>
-			<li></li>
+			<li><code>Number</code> and <code>Math</code> methods</li>
+			<li><code>innerHTML</code> property</li>
+			<li><code>querySelectorAll</code> method</li>
 		</ul>
 	</div>
 </div>

@@ -1,0 +1,23 @@
+Author:		Rich Chaffino
+Instructor:	Dr. Mandyam
+Class:		CIS 023A - Advanced JavaScript
+Date:   	20 July 2020
+Project:	4 Function Calculatoe
+Filename:	notes4.txt
+
+This 4 Function Calculator GUI accepts integer values
+and returns a a calculated value rounded to two decimals.
+The result is displayed in a readonly input element.
+
+Main parts of calcResult() function
+- If isNaN, then zero out the fields
+- Extra decimals are rounded
+- Amounts in excess of 1000 are truncated
+- Absolute value is taken of negative numbers
+- If the user attempts to divide by 0,
+   the second argument value is cleared
+
+Small extras
+- On input focus or change of operation, the result is cleared
+- The operator symbol changes when a radio button is clicked
+- When a division is rounded, the equal sign becomes approximate
