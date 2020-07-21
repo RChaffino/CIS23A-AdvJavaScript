@@ -57,6 +57,12 @@ function getWeather(evt) {
    httpRequest.send(null);
 }
 
+function fillWeather() {
+	if (httpRequest.readyState === 4 && httpRequest.status === 200) {
+		weatherReport = JSON.parse(httpRequest.responseText);
+	}
+}
+
 var locations = document.querySelectorAll("section ul li");
 for (var i = 0; i < locations.length; i++) {
    if (locations[i].addEventListener) {
