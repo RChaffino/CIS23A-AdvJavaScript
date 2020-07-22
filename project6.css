@@ -1,0 +1,63 @@
+/*  
+ *	Author:		Rich Chaffino
+ *	Instructor:	Dr. Mandyam
+ *	Class:		CIS 023A - Advanced JavaScript
+ *	Date:   	21 July 2020
+ *	Project:	Number Sorter
+ *	Filename:	project6.css
+ */
+
+label, input {
+	font-size: 28px;
+	color: #c0305b;/*color6 red*/
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+input[type=file] {
+	font-size: 18px;
+	text-align: right;
+	color: #5cadeb;/*color1 blue*/
+	border: 3px solid #c0305b;/*color6 red*/
+	margin: 0;
+}
+
+input[type=radio] {
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	border-radius: 50%;
+	width: 24px;
+	height: 24px;
+	color: white;
+	margin-left: 12px;
+	background-color: white;
+	border: 3px solid #c0305b;/*color6 red*/
+}
+
+input[type=radio]:checked {
+	border: 12px solid #c0305b;/*color6 red*/
+}
+
+button {
+	background-color: #a0cff3;/*color2 light blue*/
+	border: 3px solid #c0305b;/*color6 red*/
+	font-size: 18px;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	margin-top: 3px;
+}
+
+button:hover {
+	color: #5cadeb;/*color1 blue*/
+}
+
+#sortButton {
+	width: 115px;
+}
+
+#sortSaveButton {
+	width: 225px;
+}

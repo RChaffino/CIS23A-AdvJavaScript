@@ -4,8 +4,8 @@
 	Author:		Rich Chaffino
 	Instructor:	Dr. Mandyam
 	Class:		CIS 023A - Advanced JavaScript
-	Date:   	
-	Project:	
+	Date:   	21 July 2020
+	Project:	Number Sorter
 	Filename:	assignment6.htm
 -->
 
@@ -46,9 +46,13 @@
 	<li><a href="assignment3.htm" class="leftnavLink">
 		Assignment 3<br>
 		Checkbook</a></li>
-	<li>Assignment 4</li>
+	<li><a href="assignment4.htm" class="leftnavLink">
+		Assignment 4<br>
+		Calculator</a></li>
 	<li>Assignment 5</li>
-	<li>Assignment 6</li>
+	<li><a href="assignment6.htm" class="leftnavLink">
+		Assignment 6<br>
+		Number Sorter</a></li>
 </ul>
 </div>
 
@@ -56,10 +60,21 @@
 </div>
 
 <div id="body">
+	<form>
+		<label for="userFile">Odd / Even Number Sorter</label><br>
+		<input type="file" id="userFile" accept=".txt"><br>
+		<button id="sortButton">Sort</button>
+		<button id="sortSaveButton">Sort & Save</button><br>
+		<textarea id="textbox" rows="8" hidden></textarea><br>
+	</form>
+	<p id="odd"></p>
+	<p id="even"></p>
 	<div class="box">
 		<h2>JavaScript Concepts</h2>
 		<ul>
-			<li></li>
+			<li>FileSaver.js and <code>saveAs()</code> method</li>
+			<li><code>&lt;input type="file"&gt;</code></li>
+			<li><code>RegExp</code> methods to filter text</li>
 		</ul>
 	</div>
 </div>
@@ -68,5 +83,6 @@
 </div>
 <script src="project6.js"></script>
 <script src="index.js"></script>
+<script src="FileSaver.js"></script>
 </body>
 </html>

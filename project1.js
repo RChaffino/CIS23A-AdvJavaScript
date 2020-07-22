@@ -3,8 +3,8 @@
  *	Instructor:	Dr. Mandyam
  *	Class:		CIS 023A - Advanced JavaScript
  *	Date:   	24 June 2020
- *	Project:	Bit of C0D3: Casino Games Training
- *	Filename:	projects.js
+ *	Project:	Reverse GUI
+ *	Filename:	project1.js
  */
 
 "use scrict";
